@@ -1,0 +1,13 @@
+@include b('master-class'){
+	@include padding-y(75px);
+
+	@include min(sm){
+		@include padding-y(100px, 75px);
+	}
+
+	@include e('row'){
+		@include min(sm){
+			justify-content: center;
+		}
+	}
+}

@@ -1,0 +1,14 @@
+include ../bem/index
+include ../helpers/config
+include ../helpers/mixins
+- var iconClass = '_center _large-icon col-12 col-sm-6 col-md-4';
++b.SECTION.benefits
+	+quadro('_style-1 benefits__quadro_1')
+	+quadro('_style-2 benefits__quadro_2')
+	.container
+		+b.H3.title-md.title-section Мы организуем поступление так, что Вам даже не придется никуда ехать
+		+e.row.row
+			+icon(iconClass, 'img/icon-benefit-1.svg', null)
+				p Отправили более 500 подростков из Украины на учебу в Польшу. Знаем все лучшие школы и умеем с ними договариваться о выгодных условиях поступления
+			+icon(iconClass, 'img/icon-benefit-2.svg', null)
+				p Сотрудничаем со всеми школами напрямую и имеем постоянных представителей в Польше, а значит организуем Ваше поступление без «накруток» цены и лишних комиссий

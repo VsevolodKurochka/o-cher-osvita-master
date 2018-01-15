@@ -1,0 +1,27 @@
+@include b('program'){
+	position: relative;
+	@include padding-y(45px);
+
+	@include min(sm){
+		@include padding-y(75px);
+	}
+
+	@include e('background'){
+		position: absolute;
+		left: 50%;
+		bottom: 15px;
+		transform: translateX(-50%);
+	}
+	
+	@include e('content'){
+		margin-bottom: 30px;
+
+		@include min(sm){
+			margin-bottom: 45px;
+		}
+	}
+
+	@include e('footer'){
+		text-align: center
+	}
+}
