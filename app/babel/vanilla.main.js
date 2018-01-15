@@ -26,32 +26,9 @@
 (function(){
 	document.addEventListener("DOMContentLoaded", function(){
 
-		// Emergence
-			emergence.init();
+		// Cookie timer
 
-		// WOW JS
-			var wow = new WOW();
-			wow.init();
-
-		// Scroll
-		const headerContainer = document.getElementById('site-header-container');
-		const headerContainerHeight = headerContainer.offsetHeight;
-		
-		const range = 200;
-
-		window.addEventListener('scroll', function(){
-			let scroll = this.scrollY;
-			if(scroll < headerContainerHeight + 100){
-				headerContainer.style.transform = `translate(0, ${scroll / 10}%)`;
-				headerContainer.style.opacity = 1 - (scroll - headerContainerHeight + range) / range;
-
-				if(headerContainer.style.opacity > '1'){
-					headerContainer.style.opacity = '1';
-				}else if(headerContainer.style.opacity < '0'){
-					headerContainer.style.opacity = '0';
-				}
-			}
-		});
+			CookieTimer.start('timer', null, 600);
 
 		const classes = {
 			active: 'active',
@@ -88,16 +65,23 @@
 			// Navigation links
 
 				var scroll = new SmoothScroll('a[href*="#"]', {
-					offset: 70
+					speed: 1000
 				});
 
-				const jsNavLinks = document.querySelectorAll('.nav__menu a[href*="#"]');
+				const jsNavLinks = document.querySelectorAll('.v-nav__menu a[href*="#"]');
 
 				for(var i = 0; i < jsNavLinks.length; i++){
 					jsNavLinks[i].addEventListener('click', function(e) {
 
+						e.preventDefault();
+
+						let vnavhref = this.getAttribute("href").replace("#", "");
+						let vnavscrollAnchor = document.getElementById(vnavhref);
+
 						removeClass(jsNavBtn, classes.active);
 						removeClass(jsNav, classes.menuActive);
+
+						//scrollTo(document.body, vnavscrollAnchor.offsetTop, 600);
 
 					});
 				}
@@ -126,7 +110,7 @@
 
 				function checkScrollY(){
 					let windowScroll = window.scrollY;
-					windowScroll > 0 ? addClass(jsNavWrapper, 'nav_scrolled') : removeClass(jsNavWrapper, 'nav_scrolled');
+					windowScroll > 0 ? addClass(jsNavWrapper, 'v-nav_scrolled') : removeClass(jsNavWrapper, 'v-nav_scrolled');
 				}
 
 				checkScrollY();
@@ -135,7 +119,7 @@
 
 
 		// Modal Window initialization
-		let themeModal = 'modal';
+		let themeModal = 'v-modal';
 		let modalBtn = document.querySelectorAll(`[data-action="${themeModal}"]`);
 		let modalBtnL = modalBtn.length;
 

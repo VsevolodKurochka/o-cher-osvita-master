@@ -32,32 +32,9 @@ var exists = function exists(element) {
 (function () {
 	document.addEventListener("DOMContentLoaded", function () {
 
-		// Emergence
-		emergence.init();
+		// Cookie timer
 
-		// WOW JS
-		var wow = new WOW();
-		wow.init();
-
-		// Scroll
-		var headerContainer = document.getElementById('site-header-container');
-		var headerContainerHeight = headerContainer.offsetHeight;
-
-		var range = 200;
-
-		window.addEventListener('scroll', function () {
-			var scroll = this.scrollY;
-			if (scroll < headerContainerHeight + 100) {
-				headerContainer.style.transform = 'translate(0, ' + scroll / 10 + '%)';
-				headerContainer.style.opacity = 1 - (scroll - headerContainerHeight + range) / range;
-
-				if (headerContainer.style.opacity > '1') {
-					headerContainer.style.opacity = '1';
-				} else if (headerContainer.style.opacity < '0') {
-					headerContainer.style.opacity = '0';
-				}
-			}
-		});
+		CookieTimer.start('timer', null, 600);
 
 		var classes = {
 			active: 'active',
@@ -94,16 +71,23 @@ var exists = function exists(element) {
 		// Navigation links
 
 		var scroll = new SmoothScroll('a[href*="#"]', {
-			offset: 70
+			speed: 1000
 		});
 
-		var jsNavLinks = document.querySelectorAll('.nav__menu a[href*="#"]');
+		var jsNavLinks = document.querySelectorAll('.v-nav__menu a[href*="#"]');
 
 		for (var i = 0; i < jsNavLinks.length; i++) {
 			jsNavLinks[i].addEventListener('click', function (e) {
 
+				e.preventDefault();
+
+				var vnavhref = this.getAttribute("href").replace("#", "");
+				var vnavscrollAnchor = document.getElementById(vnavhref);
+
 				removeClass(jsNavBtn, classes.active);
 				removeClass(jsNav, classes.menuActive);
+
+				//scrollTo(document.body, vnavscrollAnchor.offsetTop, 600);
 			});
 		}
 
@@ -130,7 +114,7 @@ var exists = function exists(element) {
 
 		function checkScrollY() {
 			var windowScroll = window.scrollY;
-			windowScroll > 0 ? addClass(jsNavWrapper, 'nav_scrolled') : removeClass(jsNavWrapper, 'nav_scrolled');
+			windowScroll > 0 ? addClass(jsNavWrapper, 'v-nav_scrolled') : removeClass(jsNavWrapper, 'v-nav_scrolled');
 		}
 
 		checkScrollY();
@@ -138,7 +122,7 @@ var exists = function exists(element) {
 		window.addEventListener("scroll", checkScrollY);
 
 		// Modal Window initialization
-		var themeModal = 'modal';
+		var themeModal = 'v-modal';
 		var modalBtn = document.querySelectorAll('[data-action="' + themeModal + '"]');
 		var modalBtnL = modalBtn.length;
 

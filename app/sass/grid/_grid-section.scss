@@ -1,7 +1,4 @@
 @include b('section'){
 	@include relative();
-	@include padding-y(25px);
-	@include min(md){
-		@include padding-y(50px);
-	}
+	@include padding-y(50px);
 }

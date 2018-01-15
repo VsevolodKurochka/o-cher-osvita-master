@@ -1,25 +1,25 @@
 /// Sizes for elements.
 $sizes: (
-	'title-xs': (
+	'v-title-xs': (
 		xs:   18px
 	),
-	'title-sm': (
+	'v-title-sm': (
 		sm:   21px,
 		md:   24px
 	),
-	'title-md': (
+	'v-title-md': (
 		sm:   30px,
 		md:   36px
 	),
-	'title-lg': (
-		sm:   50px,
-		md:   60px,
-		lg:   90px
+	'v-title-lg': (
+		sm:   40px,
+		md:   50px,
+		lg:   53px
 	)
 );
 
 
-%title-default{
+%v-title-default{
 	margin-top: 5px;
 	line-height: 1.2;
 	font-weight: normal;
@@ -28,23 +28,23 @@ $sizes: (
 @include b('title'){
 	&-xs{
 		font-size: 18px;
-		@include fs('title-xs');
-		@extend %title-default;
+		@include fs('v-title-xs');
+		@extend %v-title-default;
 	}
 	&-sm{
 		font-size: 20px;
-		@include fs('title-sm');
-		@extend %title-default;
+		@include fs('v-title-sm');
+		@extend %v-title-default;
 	}
 	&-md{
 		font-size: 25px;
-		@include fs('title-md');
-		@extend %title-default;
+		@include fs('v-title-md');
+		@extend %v-title-default;
 	}
 	&-lg{
-		font-size: 25px;
-		@include fs('title-lg');
-		@extend %title-default;
+		font-size: 30px;
+		@include fs('v-title-lg');
+		@extend %v-title-default;
 	}
 	&-section{
 		text-align: center;
