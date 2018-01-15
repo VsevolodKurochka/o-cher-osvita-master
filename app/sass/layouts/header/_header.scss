@@ -4,6 +4,14 @@
 	z-index: z-index('default');
 	@include bg('../img/header.jpg');
 	color: $color-white;
+	&:before{
+		@include pseudo();
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: transparentize(#000, 0.3);
+	}
 	@media screen{
 		@include min(md){
 			background-attachment: fixed;
@@ -44,35 +52,31 @@
 		}
 	}
 	@include e('description'){
-		$description-color: transparentize($color-black, 0.2);
-		@include ee('title'){
-			padding: 15px 15px 60px 15px;
-			background-color: $description-color;
-			@include m('thx'){
-				padding: 15px;
-			}
-		}
-		@include ee('content'){
-			position: relative;
-			top: -30px;
-			padding-right: 30px;
-			@include max(sm){
-				font-size: 16px;
-			}
-			@include min(sm){
-				padding-right: 75px;
-				top: -45px;
-			}
-			@include ee('inner'){
-				padding: 5px 30px 30px 15px;
-				background-color: $description-color;
-			}
-
-		}
-		@include ee('footer'){
-			margin-top: 15px;
+		margin-bottom: 15px;
+		@include min(md){
+			font-size: 24px;
 		}
 	}
+	
+	@include e('info'){
+		position: relative;
+		padding-left: 60px;
+		&:before{
+			@include pseudo();
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 45px;
+			height: 45px;
+			background-color: $color-brand-1;
+		}
+
+		@include ee('time'){
+			font-weight: bold;
+			font-size: 25px;
+		}
+	}
+
 	@include e('quadro'){
 		top: calc(100% - #{$quadro-size / 3});
 		left: 0;
@@ -84,7 +88,7 @@
 		@include m('form'){
 			@include min(sm){
 				position: relative;
-				top: 200px;
+				top: 100px;
 			}
 		}
 	}

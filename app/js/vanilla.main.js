@@ -34,7 +34,12 @@ var exists = function exists(element) {
 
 		// Cookie timer
 
-		CookieTimer.start('timer', null, 600);
+		// Emergence
+		emergence.init();
+
+		// WOW JS
+		var wow = new WOW();
+		wow.init();
 
 		var classes = {
 			active: 'active',

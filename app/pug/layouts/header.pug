@@ -6,30 +6,18 @@ include ../helpers/mixins
 	.v-container
 		+e.row.row
 			.v-col-12.v-col-sm-7
+				+e.P.description Бесплатный живой мастер-класс
 				+e.H1.title.title-lg
-					|Среднее
+					| Доступное среднее
 					br
 					|образование в 
 					+e.SPAN.title-flag Польше
-				+e.description
-					+e.P.description-title Поможем Вашему ребенку поступить в престижную польскую школу, лицей или техникум, после которого он сможет:
-					+e.description-content
-						+e.description-content-inner
-							+b.UL.list._check
-								li Стать студентом рейтингового Европейского вуза
-								li Остаться жить и работать в Европе или
-								li Вернуться востребованным специалистом в Украину
-							+e.description-footer
-								p
-									span.v-color-brand-3 * 
-									|9 из 10 детей наших клиентов остаются жить в Европе после окончания лицея или техникума в Польше
+				+e.P.description Узнайте как отправить Вашего подростка учиться в Польшу, даже если его успеваемость «хромает», а Ваш доход на семью не превышает 1000$/месяц
+				+e.info
+					+e.P.info-time 7 февраля
+					+e.P.info-place г.Киев. ул. Большая Васильковская, 30. 3 этаж, <br>зал "Conference Room"
 			+e.column._form.col-12.col-sm-5.col-md-4
 				+b.shadow
-					+e.header
-						+e.P.title
-							| Запишитесь на 
-							span.v-color-brand-2 бесплатную консультацию 
-							| и мы предварительно оценим шансы Вашего ребенка на поступление
 					+e.content
 						+b.FORM.form._block(action="mail.php" method="POST")
 							+e.content
