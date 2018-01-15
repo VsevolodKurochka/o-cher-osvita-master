@@ -25,24 +25,24 @@ script.
 	// When the user clicks the marker, an info window opens.
 
 	function initMap() {
-		var uluru = {lat: 50.434675, lng: 30.514878};
+		var uluru = {lat: 50.438051, lng: 30.50899};
 		var map = new google.maps.Map(document.getElementById('map'), {
-			zoom: 15,
+			zoom: 17,
 			center: uluru,
 			disableDefaultUI: true,
 			scrollwheel: false
 		});
 		
-		var title = 'г. Киев, ул. Антоновича, 33 В, оф. 11';
+		var title = 'г.Киев. ул. Большая Васильковская, 30. 3 этаж';
 
-		var contentString = '<div id="content">'+ title + '</div>';
+		var contentString = '<div class="contact__info-window">'+ title + '</div>';
 
 		var infowindow = new google.maps.InfoWindow({
 			content: contentString
 		});
 
 		var marker = new google.maps.Marker({
-			position: uluru,
+			position: {lat: 50.438051, lng: 30.51499},
 			map: map,
 			title: title,
 			icon: 'img/map-marker.png'

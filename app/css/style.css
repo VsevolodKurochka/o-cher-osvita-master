@@ -2458,12 +2458,6 @@ input[type="checkbox"]:checked + .control__indicator:before {
   padding-top: 34px;
 }
 
-@media (max-width: 767px) {
-  .contact {
-    margin-top: 150px;
-  }
-}
-
 @media (min-width: 768px) {
   .contact {
     padding-top: 200px;
@@ -2498,7 +2492,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
 @media (min-width: 768px) {
   .contact__info {
     width: 450px;
-    margin-left: 10%;
+    margin-left: 5%;
   }
 }
 
@@ -2592,6 +2586,10 @@ input[type="checkbox"]:checked + .control__indicator:before {
   }
 }
 
+.contact__info-window {
+  font-family: 'FormularBold';
+}
+
 .contact__quadro_2 {
   right: 0;
   bottom: -webkit-calc(100% - 34px);
@@ -2660,6 +2658,44 @@ input[type="checkbox"]:checked + .control__indicator:before {
 }
 
 .program__footer {
+  text-align: center;
+}
+
+.trener {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+@media (min-width: 768px) {
+  .trener {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+}
+
+.trener__row {
+  margin-bottom: 45px;
+}
+
+@media (min-width: 768px) {
+  .trener__row {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+.trener__name {
+  margin-bottom: 15px;
+  color: #0057a2;
+}
+
+.trener__footer {
   text-align: center;
 }
 

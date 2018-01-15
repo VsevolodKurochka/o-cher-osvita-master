@@ -1,12 +1,16 @@
 include ../bem/index
 include ../helpers/config
 include ../helpers/mixins
-- var iconClass = '_center _large-icon col-12 col-sm-6 col-md-4';
+- var iconClass = '_center _large-icon col-12 col-sm-6 col-md-5';
 +b.SECTION.benefits
 	+quadro('_style-1 benefits__quadro_1')
-	+quadro('_style-2 benefits__quadro_2')
+	+quadro('_style-1 benefits__quadro_2')
 	.container
-		+b.H3.title-md.title-section Мы организуем поступление так, что Вам даже не придется никуда ехать
+		+b.H3.title-md.title-section Оказывается, мы можем себе это позволить!...
+		+b.H4.title-xs.title-section-small 
+			| Именно это чаще всего говорят родители после мастер-класса.
+			br
+			| А всё потому что мы:
 		+e.row.row
 			+icon(iconClass, 'img/icon-benefit-1.svg', null)
 				p Отправили более 500 подростков из Украины на учебу в Польшу. Знаем все лучшие школы и умеем с ними договариваться о выгодных условиях поступления
