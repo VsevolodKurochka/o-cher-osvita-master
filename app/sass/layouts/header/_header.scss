@@ -21,7 +21,7 @@
 		@include padding-y(75px, 50px);
 	}
 	@include min(md){
-		@include padding-y(140px, 80px);
+		@include padding-y(140px, 100px);
 	}
 
 	@include m('thx'){
@@ -88,7 +88,7 @@
 		@include m('form'){
 			@include min(sm){
 				position: relative;
-				top: 100px;
+				top: 25px;
 			}
 		}
 	}

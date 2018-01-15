@@ -6,17 +6,17 @@ include ../helpers/mixins
 	.container
 		+e.row.row
 			.col-12.col-sm-7
-				+e.P.description Бесплатный живой мастер-класс
-				+e.H1.title.title-lg
+				+e.P.description.wow.fadeInLeft(data-wow-delay="0.1s") Бесплатный живой мастер-класс
+				+e.H1.title.title-lg.wow.fadeInLeft(data-wow-delay="0.2s")
 					| Доступное среднее
 					br
 					|образование в 
 					+e.SPAN.title-flag Польше
-				+e.P.description Узнайте как отправить Вашего подростка учиться в Польшу, даже если его успеваемость «хромает», а Ваш доход на семью не превышает 1000$/месяц
-				+e.info
+				+e.P.description.wow.fadeInLeft(data-wow-delay="0.25s") Узнайте как отправить Вашего подростка учиться в Польшу, даже если его успеваемость «хромает», а Ваш доход на семью не превышает 1000$/месяц
+				+e.info.wow.fadeInLeft(data-wow-delay="0.3s")
 					+e.P.info-time Киев, 7 февраля
 					+e.P.info-place г.Киев. ул. Большая Васильковская, 30. 3 этаж, <br>зал "Conference Room"
-			+e.column._form.col-12.col-sm-5.col-md-4
+			+e.column._form.col-12.col-sm-5.col-md-4.wow.fadeInRight(data-wow-delay="0.4s")
 				+b.shadow
 					+e.content
 						+b.FORM.form._block(action="mail.php" method="POST")

@@ -37,7 +37,7 @@ mixin menu-item(isLink,href, name)
 			block
 
 mixin icon(classname, img, title)
-	+b.icon(class=classname)
+	+b.icon(class=classname)&attributes(attributes)
 		+e.inner
 			+e.header
 				+e.img(src=img)

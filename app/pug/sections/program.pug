@@ -4,22 +4,22 @@ include ../helpers/mixins
 - var iconClass = '_center col-12 col-sm-6 col-md-4';
 +b.SECTION.program
 	.container
-		+e.background(src="img/program.png")
-		+b.H3.title-md.title-section
+		+e.background.wow.fadeIn(src="img/program.png" data-wow-delay="0.3s")
+		+b.H3.title-md.title-section.wow.fadeInUp
 			span.color-brand-2 Программа 
 			| мастер-класса
 		+e.content.row
-			.col-xs-12.col-sm-6
+			.col-xs-12.col-sm-6.wow.fadeInLeft(data-wow-delay="0.15s")
 				+b.UL.list._flag
 					li Почему все больше украинских родителей отправляют детей учиться Европу
 					li Реальные цены на поступление, обучение, проживание и питание в Польше
 					li Почему в польские техникумы и лицеи поступают даже дети с «такой себе» успеваемостью
 					li Как остаться в Польше после окончания учебы
-			.col-xs-12.col-sm-6
+			.col-xs-12.col-sm-6.wow.fadeInRight(data-wow-delay="0.35s")
 				+b.UL.list._flag
 					li Требования польских школ для детей из Украины
 					li Как предусмотреть возможные трудности и обойти все “подводные камни” поступления
 					li Ключевые отличия польских школ от украинских<br>Как не беспокоится за здоровье, безопасность и успеваемость ребенка в Польше
 					li Чего не учитывают большинство родителей при подготовке и потому в 9 из 10-ти случаев не поступают
-		+e.footer
+		+e.footer.wow.fadeInUp(data-wow-delay="0.25s")
 			+b.BUTTON.btn._size-lg._brand-1.effect._bounce-top(data-action="modal" data-open="#modal-form") Участвовать бесплатно

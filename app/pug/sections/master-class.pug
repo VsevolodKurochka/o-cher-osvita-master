@@ -1,17 +1,17 @@
 include ../bem/index
 include ../helpers/config
 include ../helpers/mixins
-- var iconClass = '_center col-12 col-sm-6 col-md-4';
+- var iconClass = '_center col-12 col-sm-6 col-md-4 wow fadeInUp';
 +b.SECTION.master-class
 	.container
-		+b.H3.title-md.title-section
+		+b.H3.title-md.title-section.wow.fadeInUp
 			span.color-brand-2 Этот мастер-класс -
 			| отправная точка
 			br
 			| для обеспеченного будущего Вашего ребенка
-		+b.H4.title-xs.title-section-small Будущего, в котором он сможет:
+		+b.H4.title-xs.title-section-small.wow.fadeInUp(data-wow-delay="0.25s") Будущего, в котором он сможет:
 		+e.row.row
-			+icon(iconClass, 'img/master-class-1.svg', 'Поступить в престижный европейский ВУЗ')
+			+icon(iconClass, 'img/master-class-1.svg', 'Поступить в престижный европейский ВУЗ')(data-wow-delay="0.3s")
 				p Остаться легально жить в Европе, а позже перевезти всю свою семью
-			+icon(iconClass, 'img/master-class-2.svg', 'Устроится на высокооплачиваемую работу')
+			+icon(iconClass, 'img/master-class-2.svg', 'Устроится на высокооплачиваемую работу')(data-wow-delay="0.4s")
 				p Вернуться на родину и стать тут востребованным специалистом с зарплатой в $ или €

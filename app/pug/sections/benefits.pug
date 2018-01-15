@@ -1,18 +1,18 @@
 include ../bem/index
 include ../helpers/config
 include ../helpers/mixins
-- var iconClass = '_center _large-icon col-12 col-sm-6 col-md-5';
+- var iconClass = '_center _large-icon col-12 col-sm-6 col-md-5 wow fadeInUp';
 +b.SECTION.benefits
 	+quadro('_style-1 benefits__quadro_1')
 	+quadro('_style-1 benefits__quadro_2')
 	.container
-		+b.H3.title-md.title-section Оказывается, мы можем себе это позволить!...
-		+b.H4.title-xs.title-section-small 
+		+b.H3.title-md.title-section.wow.fadeInUp Оказывается, мы можем себе это позволить!...
+		+b.H4.title-xs.title-section-small.wow.fadeInUp(data-wow-delay="0.25s")
 			| Именно это чаще всего говорят родители после мастер-класса.
 			br
 			| А всё потому что мы:
 		+e.row.row
-			+icon(iconClass, 'img/icon-benefit-1.svg', null)
+			+icon(iconClass, 'img/icon-benefit-1.svg', null)(data-wow-delay="0.3s")
 				p Отправили более 500 подростков из Украины на учебу в Польшу. Знаем все лучшие школы и умеем с ними договариваться о выгодных условиях поступления
-			+icon(iconClass, 'img/icon-benefit-2.svg', null)
+			+icon(iconClass, 'img/icon-benefit-2.svg', null)(data-wow-delay="0.4s")
 				p Сотрудничаем со всеми школами напрямую и имеем постоянных представителей в Польше, а значит организуем Ваше поступление без «накруток» цены и лишних комиссий
