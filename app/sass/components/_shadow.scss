@@ -54,6 +54,12 @@
 	@include e('content'){
 		@include padding-x(10px);
 	}
+
+	@include e('footer'){
+		text-align: center;
+		margin-top: 15px;
+	}
+
 	&_large{
 		padding: 45px 15px;
 		@include min(md){

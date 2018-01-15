@@ -79,7 +79,7 @@ var exists = function exists(element) {
 			speed: 1000
 		});
 
-		var jsNavLinks = document.querySelectorAll('.v-nav__menu a[href*="#"]');
+		var jsNavLinks = document.querySelectorAll('.nav__menu a[href*="#"]');
 
 		for (var i = 0; i < jsNavLinks.length; i++) {
 			jsNavLinks[i].addEventListener('click', function (e) {
@@ -119,7 +119,7 @@ var exists = function exists(element) {
 
 		function checkScrollY() {
 			var windowScroll = window.scrollY;
-			windowScroll > 0 ? addClass(jsNavWrapper, 'v-nav_scrolled') : removeClass(jsNavWrapper, 'v-nav_scrolled');
+			windowScroll > 0 ? addClass(jsNavWrapper, 'nav_scrolled') : removeClass(jsNavWrapper, 'v-nav_scrolled');
 		}
 
 		checkScrollY();
@@ -127,7 +127,7 @@ var exists = function exists(element) {
 		window.addEventListener("scroll", checkScrollY);
 
 		// Modal Window initialization
-		var themeModal = 'v-modal';
+		var themeModal = 'modal';
 		var modalBtn = document.querySelectorAll('[data-action="' + themeModal + '"]');
 		var modalBtnL = modalBtn.length;
 
