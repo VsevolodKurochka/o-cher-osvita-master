@@ -108,16 +108,18 @@ var exists = function exists(element) {
 		}
 
 		// Window scrolling JS
-		var jsNavWrapper = document.getElementById('js-wrapper-navigation');
+		if(exists(document.getElementById('js-wrapper-navigation'))){
+			var jsNavWrapper = document.getElementById('js-wrapper-navigation');
 
-		function checkScrollY() {
-			var windowScroll = window.scrollY;
-			windowScroll > 0 ? addClass(jsNavWrapper, 'nav_scrolled') : removeClass(jsNavWrapper, 'v-nav_scrolled');
+			function checkScrollY() {
+				var windowScroll = window.scrollY;
+				windowScroll > 0 ? addClass(jsNavWrapper, 'nav_scrolled') : removeClass(jsNavWrapper, 'v-nav_scrolled');
+			}
+
+			checkScrollY();
+
+			window.addEventListener("scroll", checkScrollY);
 		}
-
-		checkScrollY();
-
-		window.addEventListener("scroll", checkScrollY);
 
 		// Modal Window initialization
 		var themeModal = 'modal';

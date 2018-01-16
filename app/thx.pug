@@ -1,14 +1,75 @@
 extends pug/layout
 block head
 	+add-meta('Main File', 'Description')
+	-
+		var logo = 'img/logo-blue.png';
+		
+		var content = {
+			title: 'Отлично!',
+			subtitle: 'Вы забронировали место в зале.',
+			content: 'Хотите уже сейчас получить ответы на 24 самых популярных вопроса о получении среднего образования в Польше?',
+			message: 'Кликайте на значок своей почты, чтобы быстро перейти в неё'
+		};
+
+		var mails = [
+			{
+				href: 'https://mail.google.com/mail/u/0/#inbox',
+				image: 'img/logo-google.png'
+			},
+			{
+				href: 'https://mail.yandex.ua/',
+				image: 'img/logo-yandex.png'
+			},
+			{
+				href: 'https://mail.ru/',
+				image: 'img/logo-mail.png'
+			}
+		];
+
 block nav
 block header
-	+b.HEADER.site-header._thx
-		.v-container
-			+e.row.row
-				.v-col-12.v-col-sm-7
-					+e.H1.title.title-lg Спасибо за Вашу заявку!
-					+e.description
-						+e.P.description-title._thx Мы свяжемся с Вами в ближайшее время, чтобы договориться о времени для бесплатной консультации.
+
 block content
+	+b.SECTION.thx
+		+e.nav
+			.container
+				+e.IMG.logo(src=logo)
+		.container
+			+e.header
+				+e.H1.title=content.title
+				+e.H2.subtitle=content.subtitle
+				+e.content
+					p=content.content
+			+e.message
+				+e.P.message-title=content.message
+				+e.message-row.row
+					each mail in mails
+						.col-12.col-sm-4
+							+e.A.message-button(target="_blank" href=mail.href)
+								+e.IMG.message-button-image(src=mail.image)
+	+b.SECTION.bonus.section
+		.container
+			+b.H3.title-md.title-section
+				| Подпишитесь на нашего
+				br
+				span.color-brand-2 чат-бота в Telegram 
+				| и получите бонус
+			.row
+				.col-12.col-sm-5.col-md-4
+					+e.img
+						img(src="img/bonus.png")
+				.col-12.col-sm-7.col-md-8
+					+e.content
+						p.offset-static-xs.bold
+							| Мини-руководство с ответами на
+							br
+							| популярные вопросы по учебе в Польше
+						+b.UL.list._flag
+							li Реально ли среднее образование в Польше доступно и почему?
+							li Какие нюансы стоит учесть перед отправкой ребенка на учебу?
+							li Где ребенок будет жить, как питаться? Сколько это стоит в месяц?
+							li Как быстрее всего выучить польский язык?
+							li Есть ли вступительные экзамены? Какие?
+							li Что делать, если ребенок заболел?
+					+e.form-row.row
 block footer

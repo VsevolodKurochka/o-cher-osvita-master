@@ -1,0 +1,109 @@
+@include b('thx'){
+	@include padding-y(30px);
+
+
+	@include e('nav'){
+		margin-bottom: 15px;
+		font-size: 0;
+	}
+
+	@include e('logo'){
+		height: 48px;
+	}
+
+	@include e('header'){
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	
+	@at-root{
+		%thx-title{
+			color: $color-brand-2;
+			font-family: 'FormularBold';
+			margin-bottom: 15px;
+			line-height: 1.1;
+			@include min(md){
+				margin-bottom: 30px;
+			}
+		}
+	}
+	@include e('title'){
+		@extend %thx-title;
+		font-size: 30px;
+		@include min(md){
+			font-size: 55px;
+		}
+	}
+	@include e('subtitle'){
+		@extend %thx-title;
+		font-size: 22px;
+		@include min(md){
+			font-size: 36px;
+		}
+	}
+
+	@include e('content'){
+		@include min(md){
+			font-size: 24px;
+			line-height: 1.2;
+		}
+	}
+
+	@include e('message'){
+		background-color: #fff;
+  	box-shadow: 0px 13px 50px 0px rgba(0, 0, 0, 0.2);
+		padding: 15px;
+
+  	@include min(md){
+  		padding: 30px;
+  	}
+
+
+  	@include ee('title'){
+  		text-align: center;
+  		color: $color-brand-2;
+			font-family: 'FormularBold';
+			margin-bottom: 15px;
+			line-height: 1.1;
+			@include min(md){
+				margin-bottom: 30px;
+				font-size: 24px;
+			}
+  	}
+
+  	@include ee('button'){
+  		position: relative;
+  		display: flex;
+  		align-items: center;
+  		justify-content: center;
+  		width: 100%;
+			background-color: rgb(244, 244, 244);
+			text-align: center;
+			overflow: hidden;
+			height: 80px;
+			font-size: 0;
+			z-index: 1;
+			&:before{
+				@include pseudo();
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #d0d0d0;
+				transform: translateY(90%);
+				@include transition();
+				z-index: -1;
+			}
+
+			&:hover{
+				&:before{
+					transform: none;
+				}
+			}
+
+			@include ee('image'){
+				max-height: 30px;
+			}
+  	}
+	}
+}

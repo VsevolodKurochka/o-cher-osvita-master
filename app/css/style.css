@@ -2412,7 +2412,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
 }
 
 .bonus {
-  padding-top: 90px;
+  padding-top: 45px;
   padding-bottom: 0;
 }
 
@@ -2697,6 +2697,147 @@ input[type="checkbox"]:checked + .control__indicator:before {
 
 .trener__footer {
   text-align: center;
+}
+
+.thx {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.thx__nav {
+  margin-bottom: 15px;
+  font-size: 0;
+}
+
+.thx__logo {
+  height: 48px;
+}
+
+.thx__header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.thx__title, .thx__subtitle {
+  margin-bottom: 15px;
+  font-family: 'FormularBold';
+  line-height: 1.1;
+  color: #0057a2;
+}
+
+@media (min-width: 1025px) {
+  .thx__title, .thx__subtitle {
+    margin-bottom: 30px;
+  }
+}
+
+.thx__title {
+  font-size: 30px;
+}
+
+@media (min-width: 1025px) {
+  .thx__title {
+    font-size: 55px;
+  }
+}
+
+.thx__subtitle {
+  font-size: 22px;
+}
+
+@media (min-width: 1025px) {
+  .thx__subtitle {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .thx__content {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+}
+
+.thx__message {
+  padding: 15px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 13px 50px 0px rgba(0, 0, 0, .2);
+  box-shadow: 0px 13px 50px 0px rgba(0, 0, 0, .2);
+}
+
+@media (min-width: 1025px) {
+  .thx__message {
+    padding: 30px;
+  }
+}
+
+.thx__message-title {
+  margin-bottom: 15px;
+  font-family: 'FormularBold';
+  line-height: 1.1;
+  color: #0057a2;
+  text-align: center;
+}
+
+@media (min-width: 1025px) {
+  .thx__message-title {
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
+}
+
+.thx__message-button {
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 80px;
+  overflow: hidden;
+  font-size: 0;
+  text-align: center;
+  background-color: #f4f4f4;
+
+  -webkit-box-align: center;
+
+  -webkit-align-items: center;
+
+  -ms-flex-align: center;
+
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.thx__message-button:before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: #d0d0d0;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+  -webkit-transform: translateY(90%);
+  -ms-transform: translateY(90%);
+  transform: translateY(90%);
+}
+
+.thx__message-button:hover:before {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.thx__message-button-image {
+  max-height: 30px;
 }
 
 .modal, .modal_showing, .modal__box {
