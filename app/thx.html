@@ -28,10 +28,10 @@
     <div class="site" id="page">
       <div class="site-content" id="content">
                     <section class="thx">
-                                      <div class="thx__nav">
-                                        <div class="container"><img class="thx__logo" src="img/logo-blue.png" alt="" role="presentation"/>
-                                        </div>
-                                      </div>
+                      <!--+e.nav
+                      .container
+                      	+e.IMG.logo(src=logo)
+                      -->
                       <div class="container">
                                         <div class="thx__header">
                                                           <h1 class="thx__title">Отлично!
@@ -42,14 +42,12 @@
                                                             <p>Хотите уже сейчас получить ответы на 24 самых популярных вопроса о получении среднего образования в Польше?</p>
                                                           </div>
                                         </div>
-                                        <div class="thx__message">
-                                        </div>
                       </div>
                     </section>
                     <section class="book-section">
                       <div class="container">
-                                    <h3 class="title-md title-section">Подпишитесь на нашего <span class="color-brand-2">чат-бота </span>в Facebook <br>и сразу получите книгу в сообщениях своей страницы
-                                    </h3>
+                                        <h3 class="book-section__title">Подпишитесь на нашего <span class="color-brand-2">чат-бота </span>в Facebook <br>и сразу получите книгу в сообщениях своей страницы
+                                        </h3>
                                         <div class="book-section__row row">
                                           <div class="col-12 col-sm-5">
                                                             <div class="book-section__content">
@@ -87,46 +85,33 @@
                       </div>
                     </section>
       </div>
-                        <footer class="site-footer">
-                                                  <div class="site-footer__container container">
-                                                                            <div class="site-footer__row row">
-                                                                                                      <div class="site-footer__logo col-12 col-sm-2"><img src="img/logo.png">
-                                                                                                      </div>
-                                                                                                      <div class="site-footer__info col-12 col-sm-10">
-                                                                                                                                <button class="site-footer__link" data-action="modal" data-open="#modal-politic">Политика конфиденциальности
-                                                                                                                                </button>
-                                                                                                                                <button class="site-footer__link" data-action="modal" data-open="#modal-otkaz">Отказ от ответственности
-                                                                                                                                </button>
-                                                                                                      </div>
-                                                                            </div>
-                                                  </div>
-                        </footer>
-                        <div class="modal" id="modal-politic">
-                                                  <div class="modal__box modal__box_default">
-                                                                            <div class="modal__header">
-                                                                                                      <p class="modal__title">Политика конфиденциальности
-                                                                                                      </p>
-                                                                                                      <button class="modal__close" data-close="modal">&times;
-                                                                                                      </button>
-                                                                            </div>
-                                                                            <div class="modal__body">
-                                                                              <p>Lorem....</p>
-                                                                            </div>
-                                                  </div>
-                        </div>
-                        <div class="modal" id="modal-otkaz">
-                                                  <div class="modal__box modal__box_default">
-                                                                            <div class="modal__header">
-                                                                                                      <p class="modal__title">Отказ от ответственности
-                                                                                                      </p>
-                                                                                                      <button class="modal__close" data-close="modal">&times;
-                                                                                                      </button>
-                                                                            </div>
-                                                                            <div class="modal__body">
-                                                                              <p>Lorem....</p>
-                                                                            </div>
-                                                  </div>
-                        </div>
+      <!--include pug/layouts/footer-->
+                  <div class="modal" id="modal-politic">
+                                    <div class="modal__box modal__box_default">
+                                                      <div class="modal__header">
+                                                                        <p class="modal__title">Политика конфиденциальности
+                                                                        </p>
+                                                                        <button class="modal__close" data-close="modal">&times;
+                                                                        </button>
+                                                      </div>
+                                                      <div class="modal__body">
+                                                        <p>Lorem....</p>
+                                                      </div>
+                                    </div>
+                  </div>
+                  <div class="modal" id="modal-otkaz">
+                                    <div class="modal__box modal__box_default">
+                                                      <div class="modal__header">
+                                                                        <p class="modal__title">Отказ от ответственности
+                                                                        </p>
+                                                                        <button class="modal__close" data-close="modal">&times;
+                                                                        </button>
+                                                      </div>
+                                                      <div class="modal__body">
+                                                        <p>Lorem....</p>
+                                                      </div>
+                                    </div>
+                  </div>
     </div>
   </body>
 </html>

@@ -1,5 +1,5 @@
 @include b('thx'){
-	@include padding-y(30px);
+	@include padding-y(15px);
 
 
 	@include e('nav'){
@@ -17,39 +17,36 @@
 
 	@include e('header'){
 		text-align: center;
-		margin-bottom: 30px;
+		margin-bottom: 15px;
 	}
 	
 	@at-root{
 		%thx-title{
 			color: $color-brand-2;
 			font-family: 'FormularBold';
-			margin-bottom: 15px;
+			margin-bottom: 7.5px;
 			line-height: 1.1;
-			@include min(md){
-				margin-bottom: 30px;
-			}
 		}
 	}
 	@include e('title'){
 		@extend %thx-title;
 		font-size: 30px;
 		@include min(md){
-			font-size: 55px;
+			font-size: 35px;
 		}
 	}
 	@include e('subtitle'){
 		@extend %thx-title;
 		font-size: 22px;
 		@include min(md){
-			font-size: 36px;
+			font-size: 27px;
 		}
 	}
 
 	@include e('content'){
+		line-height: 1.2;
 		@include min(md){
-			font-size: 24px;
-			line-height: 1.2;
+			font-size: 18px;
 		}
 	}
 }

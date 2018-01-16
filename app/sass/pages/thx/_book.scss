@@ -42,6 +42,8 @@
 			@include min(lg){
 				font-size: 25px;
 			}
+
+
 		}
 
 		@include ee('subtitle'){
@@ -55,10 +57,21 @@
 	}
 
 	@include ee('section'){
-		padding-bottom: 90px;
+		padding-bottom: 45px;
 		@include e('row'){
 			@include min(sm){
 				align-items: center;
+			}
+		}
+
+		@include e('title'){
+			line-height: 1.1;
+			font-family: 'FormularBold';
+			margin-bottom: 15px;
+			font-size: 20px;
+			@include min(md){
+				font-size: 25px;
+				text-align: center;
 			}
 		}
 	}

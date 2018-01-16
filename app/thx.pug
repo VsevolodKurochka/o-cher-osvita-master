@@ -16,7 +16,7 @@ block header
 
 block content
 	+b.SECTION.thx
-		+e.nav
+		//+e.nav
 			.container
 				+e.IMG.logo(src=logo)
 		.container
@@ -25,10 +25,9 @@ block content
 				+e.H2.subtitle=content.subtitle
 				+e.content
 					p=content.content
-			+e.message
 	+b.SECTION.book-section
 		.container
-			+b.H3.title-md.title-section
+			+e.H3.title
 				| Подпишитесь на нашего 
 				span.color-brand-2 чат-бота 
 				| в Facebook 
@@ -65,7 +64,7 @@ block content
 								| Подписаться на чат-бота
 								+e.IMG.icon(src="img/icon-bot.svg")
 block footer
-	include pug/layouts/footer
+	//include pug/layouts/footer
 	+b.modal#modal-politic
 		+e.box._default
 			+e.header
