@@ -27,4 +27,12 @@
 			}
 		}
 	}
+
+	&_change-weight{
+		li{
+			&:nth-child(odd){
+				font-family: 'FormularBold';
+			}
+		}
+	}
 }

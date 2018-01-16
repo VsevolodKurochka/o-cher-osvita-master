@@ -1,0 +1,92 @@
+@include b('book'){
+	position: relative;
+	background-color: transparentize(#fff, 0.2);
+	padding: 30px 15px 15px 15px;
+	z-index: 1;
+	&:before{
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: url('../img/book-bg.png') 0 0 no-repeat;
+		background-size: cover;
+		object-fit: cover;
+	}
+
+	@include e('content'){
+		font-family: 'FormularBold';
+		@include ee('mark'){
+			background-color: #2b79bd;
+			color: $color-white;
+			font-size: 16px;
+			display: inline-block;
+			padding: 2px 15px;
+			margin-bottom: 10px;
+			@include min(lg){
+				font-size: 20px;
+				padding: 2px 30px;
+			}
+		}
+
+		@include ee('title'){
+			line-height: 1.1;
+			text-transform: uppercase;
+			color: #2b79bd;
+			font-size: 18px;
+			margin-bottom: 15px;
+			@include ee('mark'){
+				color: #ff2323;
+			}
+			@include min(lg){
+				font-size: 25px;
+			}
+		}
+
+		@include ee('subtitle'){
+			line-height: 1.1;
+			color: #2b79bd;
+			font-size: 16px;
+			@include min(lg){
+				font-size: 20px;
+			}
+		}
+	}
+
+	@include ee('section'){
+		padding-bottom: 90px;
+		@include e('row'){
+			@include min(sm){
+				align-items: center;
+			}
+		}
+	}
+
+
+
+	@include min(md){
+		display: flex;
+		
+		flex-flow: row wrap;
+
+		@include e('image'){
+			position: relative;
+			flex-basis: 250px;
+			z-index: -1;
+			img{
+				max-width: none;
+				width: 365px;
+				margin-left: -120px;
+				position: relative;
+				left: 120px;
+
+			}
+		}
+
+		@include e('content'){
+			flex-basis: 0;
+			flex-grow: 1;
+		}
+	}	
+}

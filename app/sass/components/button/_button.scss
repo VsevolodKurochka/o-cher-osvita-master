@@ -64,6 +64,31 @@
     }
   }
 
+  @include e('icon'){
+    display: inline-block;
+    vertical-align: middle;
+    height: 20px;
+    margin-left: 10px;
+    margin-right: 0;
+    @include min(sm){
+      height: 35px;
+      margin-left: 15px;
+      margin-right: 10px;
+    }
+  }
+
+  &_icon{
+    &-bot{
+      @include max(sm){
+        font-size: 15px;
+        padding: 15px;
+      }
+      @include min(sm){
+        padding-left: 30px;
+      }
+    }
+  }
+
   //-
   //- Iteration button fluid color
   //-

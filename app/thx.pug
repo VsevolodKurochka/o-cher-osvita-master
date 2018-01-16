@@ -11,21 +11,6 @@ block head
 			message: 'Кликайте на значок своей почты, чтобы быстро перейти в неё'
 		};
 
-		var mails = [
-			{
-				href: 'https://mail.google.com/mail/u/0/#inbox',
-				image: 'img/logo-google.png'
-			},
-			{
-				href: 'https://mail.yandex.ua/',
-				image: 'img/logo-yandex.png'
-			},
-			{
-				href: 'https://mail.ru/',
-				image: 'img/logo-mail.png'
-			}
-		];
-
 block nav
 block header
 
@@ -41,35 +26,57 @@ block content
 				+e.content
 					p=content.content
 			+e.message
-				+e.P.message-title=content.message
-				+e.message-row.row
-					each mail in mails
-						.col-12.col-sm-4
-							+e.A.message-button(target="_blank" href=mail.href)
-								+e.IMG.message-button-image(src=mail.image)
-	+b.SECTION.bonus.section
+	+b.SECTION.book-section
 		.container
 			+b.H3.title-md.title-section
-				| Подпишитесь на нашего
+				| Подпишитесь на нашего 
+				span.color-brand-2 чат-бота 
+				| в Facebook 
 				br
-				span.color-brand-2 чат-бота в Telegram 
-				| и получите бонус
-			.row
-				.col-12.col-sm-5.col-md-4
-					+e.img
-						img(src="img/bonus.png")
-				.col-12.col-sm-7.col-md-8
+				| и сразу получите книгу в сообщениях своей страницы
+			+e.row.row
+				.col-12.col-sm-5
 					+e.content
 						p.offset-static-xs.bold
 							| Мини-руководство с ответами на
 							br
 							| популярные вопросы по учебе в Польше
-						+b.UL.list._flag
+						+b.UL.list._flag._change-weight
 							li Реально ли среднее образование в Польше доступно и почему?
 							li Какие нюансы стоит учесть перед отправкой ребенка на учебу?
 							li Где ребенок будет жить, как питаться? Сколько это стоит в месяц?
 							li Как быстрее всего выучить польский язык?
 							li Есть ли вступительные экзамены? Какие?
 							li Что делать, если ребенок заболел?
-					+e.form-row.row
+				.col-12.col-sm-7
+					+b.bot
+						+b.book
+							+e.image
+								img(src='img/bonus.png')
+							+e.content
+								+e.P.content-mark PDF-КНИГА
+								+e.P.content-title
+									| КАК РЕБЁНКУ ПОЛУЧИТЬ ПРЕСТИЖНОЕ СРЕДНЕЕ 
+									+e.SPAN.content-title-mark ОБРАЗОВАНИЕ В ПОЛЬШЕ 
+									| И ЛЕГКО ПОСТУПИТЬ В ЕВРОПЕЙСКИЙ ВУЗ
+								+e.P.content-subtitle 24 ответа на популярные вопросы
+						+e.footer
+							+b.A.btn._size-lg._brand-2._icon-bot.effect._bounce-top(href='#') 
+								| Подписаться на чат-бота
+								+e.IMG.icon(src="img/icon-bot.svg")
 block footer
+	include pug/layouts/footer
+	+b.modal#modal-politic
+		+e.box._default
+			+e.header
+				+e.P.title Политика конфиденциальности
+				+e.BUTTON.close(data-close="modal") &times;
+			+e.body
+				p Lorem....
+	+b.modal#modal-otkaz
+		+e.box._default
+			+e.header
+				+e.P.title Отказ от ответственности
+				+e.BUTTON.close(data-close="modal") &times;
+			+e.body
+				p Lorem....

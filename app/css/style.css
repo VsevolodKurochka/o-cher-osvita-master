@@ -1336,6 +1336,35 @@ a, button {
   }
 }
 
+.btn__icon {
+  display: inline-block;
+  height: 20px;
+  margin-right: 0;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+@media (min-width: 768px) {
+  .btn__icon {
+    height: 35px;
+    margin-right: 10px;
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .btn_icon-bot {
+    padding: 15px;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .btn_icon-bot {
+    padding-left: 30px;
+  }
+}
+
 .btn_white {
   color: #ff911b;
   background-color: #fff;
@@ -1360,6 +1389,19 @@ a, button {
 
 .btn_brand-1-simple:hover {
   background-color: #ce6a00;
+}
+
+.btn_brand-2 {
+  color: #fff;
+  background-color: #0057a2;
+}
+
+.btn_brand-2:before {
+  background-color: #003c6f;
+}
+
+.btn_brand-2-simple:hover {
+  background-color: #002e56;
 }
 
 .btn_border-brand-1 {
@@ -1665,6 +1707,10 @@ input[type="checkbox"]:checked + .control__indicator:before {
   background: url("../img/list-flag.svg") 0 0 no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
+}
+
+.list_change-weight li:nth-child(odd) {
+  font-family: 'FormularBold';
 }
 
 .title-xs, .title-sm, .title-md, .title-lg {
@@ -2699,6 +2745,166 @@ input[type="checkbox"]:checked + .control__indicator:before {
   text-align: center;
 }
 
+.book {
+  position: relative;
+  z-index: 1;
+  padding: 30px 15px 15px 15px;
+  background-color: rgba(255, 255, 255, .8);
+}
+
+.book:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: url("../img/book-bg.png") 0 0 no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  -o-object-fit: cover;
+
+  object-fit: cover;
+}
+
+.book__content {
+  font-family: 'FormularBold';
+}
+
+.book__content-mark {
+  display: inline-block;
+  padding: 2px 15px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #2b79bd;
+}
+
+@media (min-width: 1200px) {
+  .book__content-mark {
+    padding: 2px 30px;
+    font-size: 20px;
+  }
+}
+
+.book__content-title {
+  margin-bottom: 15px;
+  font-size: 18px;
+  line-height: 1.1;
+  color: #2b79bd;
+  text-transform: uppercase;
+}
+
+.book__content-title-mark {
+  color: #ff2323;
+}
+
+@media (min-width: 1200px) {
+  .book__content-title {
+    font-size: 25px;
+  }
+}
+
+.book__content-subtitle {
+  font-size: 16px;
+  line-height: 1.1;
+  color: #2b79bd;
+}
+
+@media (min-width: 1200px) {
+  .book__content-subtitle {
+    font-size: 20px;
+  }
+}
+
+.book-section {
+  padding-bottom: 90px;
+}
+
+@media (min-width: 768px) {
+  .book-section__row {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1025px) {
+  .book {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-orient: horizontal;
+
+    -webkit-box-direction: normal;
+
+    -webkit-flex-flow: row wrap;
+
+    -ms-flex-flow: row wrap;
+
+    flex-flow: row wrap;
+  }
+  .book__image {
+    position: relative;
+    z-index: -1;
+
+    -webkit-flex-basis: 250px;
+
+    -ms-flex-preferred-size: 250px;
+
+    flex-basis: 250px;
+  }
+  .book__image img {
+    position: relative;
+    left: 120px;
+    width: 365px;
+    max-width: none;
+    margin-left: -120px;
+  }
+  .book__content {
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+}
+
+.bot {
+  position: relative;
+  padding-bottom: 30px;
+  background-color: #f3f9ff;
+  -webkit-box-shadow: inset 0 0 40px 25px #d6eaff85;
+  box-shadow: inset 0 0 40px 25px #d6eaff85;
+}
+
+.bot:before {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: -1;
+  width: 80%;
+  height: 240px;
+  content: "";
+  -webkit-box-shadow: 0 15px 40px 0px rgba(0, 87, 162, .2);
+  box-shadow: 0 15px 40px 0px rgba(0, 87, 162, .2);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.bot__footer {
+  margin-top: 30px;
+  font-size: 0;
+  text-align: center;
+}
+
 .thx {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -2707,6 +2913,12 @@ input[type="checkbox"]:checked + .control__indicator:before {
 .thx__nav {
   margin-bottom: 15px;
   font-size: 0;
+}
+
+@media (max-width: 1024px) {
+  .thx__nav {
+    text-align: center;
+  }
 }
 
 .thx__logo {
@@ -2756,88 +2968,6 @@ input[type="checkbox"]:checked + .control__indicator:before {
     font-size: 24px;
     line-height: 1.2;
   }
-}
-
-.thx__message {
-  padding: 15px;
-  background-color: #fff;
-  -webkit-box-shadow: 0px 13px 50px 0px rgba(0, 0, 0, .2);
-  box-shadow: 0px 13px 50px 0px rgba(0, 0, 0, .2);
-}
-
-@media (min-width: 1025px) {
-  .thx__message {
-    padding: 30px;
-  }
-}
-
-.thx__message-title {
-  margin-bottom: 15px;
-  font-family: 'FormularBold';
-  line-height: 1.1;
-  color: #0057a2;
-  text-align: center;
-}
-
-@media (min-width: 1025px) {
-  .thx__message-title {
-    margin-bottom: 30px;
-    font-size: 24px;
-  }
-}
-
-.thx__message-button {
-  position: relative;
-  z-index: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 80px;
-  overflow: hidden;
-  font-size: 0;
-  text-align: center;
-  background-color: #f4f4f4;
-
-  -webkit-box-align: center;
-
-  -webkit-align-items: center;
-
-  -ms-flex-align: center;
-
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.thx__message-button:before {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  content: "";
-  background-color: #d0d0d0;
-  -webkit-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease;
-  -webkit-transform: translateY(90%);
-  -ms-transform: translateY(90%);
-  transform: translateY(90%);
-}
-
-.thx__message-button:hover:before {
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.thx__message-button-image {
-  max-height: 30px;
 }
 
 .modal, .modal_showing, .modal__box {

@@ -1,0 +1,24 @@
+@include b('bot'){
+	position: relative;
+	background-color: #f3f9ff;	
+	box-shadow: inset 0 0 40px 25px #d6eaff85;
+	padding-bottom: 30px;
+
+	&:before{
+		content: "";
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 0;
+		width: 80%;
+		height: 240px;
+		box-shadow: 0 15px 40px 0px rgba(0, 87, 162, 0.20);
+		z-index: -1;
+	}
+
+	@include e('footer'){
+		text-align: center;
+		margin-top: 30px;
+		font-size: 0;
+	}
+}
